@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.1.2 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Cisco Webex Meetings and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>local.munki.pkg.munki.CiscoWebexMeetings</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Cisco Webex Meetings</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>webexmta.app</string>
+				<string>asannotation2.app</string>
+				<string>PTUpdate.app</string>
+				<string>Cisco Webex Meetings.app</string>
+				<string>Cisco WebEx Start.app</string>
+				<string>wadhost.app</string>
+				<string>WebexAppLauncher.app</string>
+				<string>Meeting Center.app</string>
+				<string>atmsupload.app</string>
+				<string>Cisco Webex Record Converter.app</string>
+				<string>convertpdf.app</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string> </string>
+			<key>developer</key>
+			<string>Cisco</string>
+			<key>display_name</key>
+			<string>Cisco Webex Meetings</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>local.munki.pkg.download.CiscoWebexMeetings</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
