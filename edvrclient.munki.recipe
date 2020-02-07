@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of edvrclient and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>local.munki.pkg.munki.edvrclient</string>
+	<string>com.github.lgalvez338.munki.edvrclient</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
