@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Cisco Webex Meetings and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>local.munki.pkg.munki.CiscoWebexMeetings</string>
+	<string>com.github.lgalvez338.munki.CiscoWebexMeetings</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -49,7 +49,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>local.munki.pkg.download.CiscoWebexMeetings</string>
+	<string>com.github.lgalvez338.download.CiscoWebexMeetings</string>
 	<key>Process</key>
 	<array>
 		<dict>
